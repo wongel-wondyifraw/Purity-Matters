@@ -32,20 +32,14 @@ export default function LandingPage() {
           Something Pure Is Coming
         </p>
         <h1 className="relative z-10 w-full max-w-7xl mx-auto text-center font-bold text-canvas mb-12 leading-tight text-[1.75rem] md:text-display-xl lg:text-[3.5rem]">
-          <span className="hover:scale-[1.02] transition-transform duration-500 leading-loose inline-block">
-            <span className="relative inline-block transition-transform duration-300 hover:-translate-y-4 hover:scale-110 cursor-pointer mx-2">
-              <svg className="absolute inset-0 w-full h-full text-black/40 pointer-events-none drop-shadow-[0_0_15px_rgba(0,0,0,0.15)]" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100%" height="100%" rx="999" fill="none" stroke="currentColor" strokeWidth="4" strokeDasharray="16 24" />
-              </svg>
-              <span className="relative z-10 text-black px-6 py-2 inline-block">ቅድስና</span>
+          <span>
+            <span className="inline-block text-black transition-transform duration-300 hover:-translate-y-4 hover:scale-110 cursor-pointer mx-1">
+              ቅድስና
             </span>
             እኛ እግዚአብሔርን የምናይበት መንፈሳዊ ዐይናችን፣ እግዚአብሔርም እኛን የሚያይበት 
             <br className="hidden lg:block" />
-            <span className="relative inline-block transition-transform duration-300 hover:-translate-y-4 hover:scale-110 cursor-pointer mx-2 mt-4 lg:mt-0">
-              <svg className="absolute inset-0 w-full h-full text-black/40 pointer-events-none drop-shadow-[0_0_15px_rgba(0,0,0,0.15)]" xmlns="http://www.w3.org/2000/svg">
-                <rect width="100%" height="100%" rx="999" fill="none" stroke="currentColor" strokeWidth="4" strokeDasharray="16 24" />
-              </svg>
-              <span className="relative z-10 text-black px-6 py-2 inline-block">ብርሃናዊ</span>
+            <span className="inline-block text-black transition-transform duration-300 hover:-translate-y-4 hover:scale-110 cursor-pointer mx-1 lg:mt-0">
+              ብርሃናዊ
             </span> 
             ልብሳችን ነው።
           </span>

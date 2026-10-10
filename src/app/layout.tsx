@@ -29,8 +29,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "Purity Matters",
-  description: "A new standard of clarity and intention. Purity Matters is preparing to launch a suite of elegant digital experiences designed to elevate your everyday interactions.",
+  title: "Purity Matters Ethiopia",
+  description: "ቅድስና እኛ እግዚአብሔርን የምናይበት መንፈሳዊ ዐይናችን፣ እግዚአብሔርም እኛን የሚያይበት ብርሃናዊ ልብሳችን ነው። Explore Purity Matters Ethiopia's books, digital platform, and resources.",
+  keywords: ["Purity Matters", "Ethiopia", "ቅድስና", "ፖርኖርሽኝ", "የኅሩያን ሕይወት", "Christian books Ethiopia"],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
