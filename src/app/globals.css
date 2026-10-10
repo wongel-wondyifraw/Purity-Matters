@@ -1,4 +1,6 @@
+@import "../formic/styles/fonts.css";    /* first: the Urbanist font */
 @import "tailwindcss";
+@import "../formic/styles/formic.css";   /* tokens, palettes, Tailwind bridge, component sheets */
 
 :root {
   --background: #ffffff;

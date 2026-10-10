@@ -6,9 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "formic": "python3 src/formic/scripts/formic_check.py src --config=package.json && python3 src/formic/scripts/compose_check.py src --config=package.json"
   },
   "dependencies": {
+    "@dicebear/core": "^9.2.2",
+    "@dicebear/notionists": "^9.2.2",
+    "@phosphor-icons/react": "^2.1.10",
     "next": "16.4.0",
     "react": "19.3.0",
     "react-dom": "19.3.0"
@@ -22,5 +26,13 @@
     "eslint-config-next": "16.4.0",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "formic": {
+    "dir": "src/formic",
+    "srcDir": "src",
+    "scope": [],
+    "legacy": [
+      "src"
+    ]
   }
 }
