@@ -17,15 +17,39 @@ export default function LandingPage() {
     <div className="flex flex-col min-h-screen bg-sidebar">
       {/* Hero Section */}
       <section 
-        className="w-full flex flex-col items-center justify-center pt-32 pb-48 px-6 text-center bg-accent"
+        className="w-full relative overflow-hidden flex flex-col items-center justify-center pt-32 pb-48 px-6 text-center bg-accent"
         style={{ clipPath: "polygon(0 0, 100% 0, 100% 85%, 0 100%)" }}
       >
-        <h1 className="text-display-xl font-semibold tracking-tight text-canvas max-w-4xl mb-6">
+        {/* Floating Decorative SVGs */}
+        <div className="absolute inset-0 pointer-events-none z-0">
+           <Icon name="sparkles" size={48} weight="fill" className="absolute top-[20%] left-[10%] text-[#eab308] opacity-60 animate-[pulse_4s_ease-in-out_infinite]" />
+           <Icon name="star" size={24} weight="fill" className="absolute top-[30%] right-[15%] text-[#eab308] opacity-40 animate-[pulse_3s_ease-in-out_infinite]" style={{ animationDelay: '1s' }} />
+           <Icon name="sparkles" size={32} weight="fill" className="absolute bottom-[35%] left-[20%] text-[#eab308] opacity-50 animate-[pulse_5s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
+           <Icon name="star" size={40} weight="fill" className="absolute bottom-[25%] right-[20%] text-[#eab308] opacity-70 animate-[pulse_6s_ease-in-out_infinite]" style={{ animationDelay: '0.5s' }} />
+        </div>
+
+        <p className="relative z-10 text-display font-bold text-canvas/90 mb-6 max-w-2xl mx-auto uppercase tracking-widest">
           Something Pure Is Coming
-        </h1>
-        <p className="text-lead text-canvas font-medium opacity-90 max-w-2xl mb-10">
-          A new standard of clarity and intention. Purity Matters is preparing to launch a suite of elegant digital experiences designed to elevate your everyday interactions.
         </p>
+        <h1 className="relative z-10 w-full max-w-7xl mx-auto text-center font-bold text-canvas mb-12 leading-tight text-[1.75rem] md:text-display-xl lg:text-[3.5rem]">
+          <span className="hover:scale-[1.02] transition-transform duration-500 leading-loose inline-block">
+            <span className="relative inline-block transition-transform duration-300 hover:-translate-y-4 hover:scale-110 cursor-pointer mx-2">
+              <svg className="absolute inset-0 w-full h-full text-black/40 pointer-events-none drop-shadow-[0_0_15px_rgba(0,0,0,0.15)]" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" rx="999" fill="none" stroke="currentColor" strokeWidth="4" strokeDasharray="16 24" />
+              </svg>
+              <span className="relative z-10 text-black px-6 py-2 inline-block">ቅድስና</span>
+            </span>
+            እኛ እግዚአብሔርን የምናይበት መንፈሳዊ ዐይናችን፣ እግዚአብሔርም እኛን የሚያይበት 
+            <br className="hidden lg:block" />
+            <span className="relative inline-block transition-transform duration-300 hover:-translate-y-4 hover:scale-110 cursor-pointer mx-2 mt-4 lg:mt-0">
+              <svg className="absolute inset-0 w-full h-full text-black/40 pointer-events-none drop-shadow-[0_0_15px_rgba(0,0,0,0.15)]" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" rx="999" fill="none" stroke="currentColor" strokeWidth="4" strokeDasharray="16 24" />
+              </svg>
+              <span className="relative z-10 text-black px-6 py-2 inline-block">ብርሃናዊ</span>
+            </span> 
+            ልብሳችን ነው።
+          </span>
+        </h1>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <div className="transition-transform duration-300 hover:scale-105">
             <Button variant="primary" size="lg" href="#products">
@@ -60,14 +84,34 @@ export default function LandingPage() {
                     </div>
                     <h1 className="text-display-lg md:text-display-xl font-bold text-canvas m-0">The Digital Platform</h1>
                   </div>
-                  <h2 className="text-lead md:text-heading font-medium text-canvas/80 mb-6">
-                    Our primary digital home is currently under construction. When it launches, you will discover a clean, comprehensive hub exploring the full scope of our vision:
-                  </h2>
-                  <ul className="flex flex-col gap-4 text-body md:text-lead text-canvas/80 font-medium">
-                    <li className="flex items-center gap-3"><Icon name="check" size={20} className="text-accent shrink-0" /> In-depth articles and resources</li>
-                    <li className="flex items-center gap-3"><Icon name="check" size={20} className="text-accent shrink-0" /> Information on upcoming events</li>
-                    <li className="flex items-center gap-3"><Icon name="check" size={20} className="text-accent shrink-0" /> Our complete catalog of offerings</li>
-                  </ul>
+                  {/* Animated UI representation of Posts and Vlogs */}
+                  <div className="relative w-full h-[260px] mt-8">
+                    {/* Post Skeleton */}
+                    <div className="absolute left-0 top-4 w-[75%] bg-white/5 border border-white/10 rounded-xl p-5 shadow-lg transform -rotate-3 transition-transform duration-700 group-hover:rotate-0 group-hover:-translate-y-2 z-10 backdrop-blur-sm">
+                      <div className="flex justify-between items-center mb-5">
+                         <div className="flex gap-3 items-center">
+                           <div className="w-8 h-8 rounded-full bg-white/20 animate-pulse" />
+                           <div className="h-3 w-28 bg-white/20 rounded-full animate-pulse" style={{ animationDelay: '200ms' }} />
+                         </div>
+                         <span className="text-white/40 text-xs font-bold tracking-widest uppercase">Posts</span>
+                      </div>
+                      <div className="h-3 w-full bg-white/10 rounded-full mb-3" />
+                      <div className="h-3 w-5/6 bg-white/10 rounded-full mb-3" />
+                      <div className="h-3 w-2/3 bg-white/10 rounded-full" />
+                    </div>
+
+                    {/* Vlog Skeleton */}
+                    <div className="absolute right-0 bottom-4 w-[70%] bg-accent/10 border border-accent/30 rounded-xl p-3 shadow-2xl transform rotate-3 transition-transform duration-700 group-hover:-rotate-3 group-hover:-translate-y-4 z-20 backdrop-blur-md">
+                      <div className="flex justify-between items-center px-2 pb-3 pt-1">
+                         <span className="text-accent/80 text-xs font-bold tracking-widest uppercase">Vlogs</span>
+                         <Icon name="video" className="text-accent/50 w-4 h-4" />
+                      </div>
+                      <div className="w-full h-32 bg-black/40 rounded-lg flex items-center justify-center relative overflow-hidden">
+                         <Icon name="play" weight="fill" size={40} className="text-accent relative z-10 transition-transform duration-300 group-hover:scale-125" />
+                         <div className="absolute inset-0 bg-accent/20 animate-ping opacity-30" style={{ animationDuration: '3s' }} />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </CardHeader>
             </Card>
@@ -90,14 +134,39 @@ export default function LandingPage() {
                     </div>
                     <h1 className="text-display-lg md:text-display-xl font-bold text-canvas m-0">Telegram Bot</h1>
                   </div>
-                  <h2 className="text-lead md:text-heading font-medium text-canvas/80 mb-6">
-                    A seamless digital assistant built directly into the app you already use. Soon, you will be able to interact with us instantly and effortlessly:
-                  </h2>
-                  <ul className="flex flex-col gap-4 text-body md:text-lead text-canvas/80 font-medium">
-                    <li className="flex items-center gap-3"><Icon name="check" size={20} className="text-accent shrink-0" /> Order physical books directly</li>
-                    <li className="flex items-center gap-3"><Icon name="check" size={20} className="text-accent shrink-0" /> Purchase and access e-books</li>
-                    <li className="flex items-center gap-3"><Icon name="check" size={20} className="text-accent shrink-0" /> Request private counseling</li>
-                  </ul>
+                  <div className="relative mt-6">
+                    <ul className="flex flex-col gap-4 text-body md:text-lead text-canvas/80 font-medium relative z-10 w-full md:w-[75%]">
+                      <li className="flex items-center gap-3"><Icon name="users" size={20} className="text-accent shrink-0" /> አማካሪ ለማግኘት፣</li>
+                      <li className="flex items-center gap-3"><Icon name="help" size={20} className="text-accent shrink-0" /> ጥያቄ ለመጠየቅ፣</li>
+                      <li className="flex items-center gap-3"><Icon name="bookmark" size={20} className="text-accent shrink-0" /> መጻሕፍት ለማዘዝ፣</li>
+                      <li className="flex items-center gap-3"><Icon name="clipboard" size={20} className="text-accent shrink-0" /> ለሥልጠና ለመመዝገብ፣</li>
+                      <li className="flex items-center gap-3"><Icon name="file" size={20} className="text-accent shrink-0" /> ኢ ቡክ ለማዘዝ፣</li>
+                      <li className="flex items-center gap-3"><Icon name="gift" size={20} className="text-accent shrink-0" /> የገንዘብ ድጋፍ ለማድረግ</li>
+                      <li className="flex items-center gap-3"><Icon name="info" size={20} className="text-accent shrink-0" /> ስለ አገልግሎቱ ለማወቅ</li>
+                    </ul>
+
+                    {/* Animated Bot Graphic */}
+                    <div className="absolute right-0 bottom-4 w-32 h-32 md:w-40 md:h-40 opacity-40 md:opacity-100 pointer-events-none flex items-center justify-center transition-transform duration-700 group-hover:-translate-x-2 z-0">
+                      {/* Bot Head */}
+                      <div className="relative z-10 w-16 h-16 md:w-20 md:h-20 bg-accent/10 border border-accent/30 rounded-2xl flex flex-col items-center justify-center transform transition-transform duration-1000 group-hover:-translate-y-6 shadow-2xl backdrop-blur-md">
+                        {/* Antenna */}
+                        <div className="absolute -top-3 w-1 h-3 bg-accent/50 rounded-t-full">
+                          <div className="absolute -top-1.5 -left-0.5 w-2 h-2 rounded-full bg-accent animate-pulse" />
+                        </div>
+                        {/* Eyes */}
+                        <div className="flex gap-3">
+                           <div className="w-2.5 h-2.5 rounded-full bg-accent animate-ping" style={{ animationDuration: '2s' }} />
+                           <div className="w-2.5 h-2.5 rounded-full bg-accent animate-ping" style={{ animationDuration: '2s', animationDelay: '200ms' }} />
+                        </div>
+                        {/* Smile */}
+                        <div className="w-6 h-1.5 border-b-2 border-accent/60 rounded-full mt-2" />
+                      </div>
+                      
+                      {/* Scanning Rings */}
+                      <div className="absolute w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-accent/20 animate-spin border-dashed" style={{ animationDuration: '10s' }} />
+                      <div className="absolute w-32 h-32 md:w-40 md:h-40 rounded-full border border-accent/10 animate-spin border-dotted" style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+                    </div>
+                  </div>
                 </div>
               </CardHeader>
             </Card>
@@ -107,19 +176,23 @@ export default function LandingPage() {
       </section>
 
       {/* Books Section */}
-      <section id="books" className="w-full bg-canvas py-24 px-8 border-t border-line scroll-mt-8">
+      <section 
+        id="books" 
+        className="w-full bg-surface py-32 px-8 scroll-mt-8 -mt-16 relative z-10"
+        style={{ clipPath: "polygon(0 10%, 100% 0, 100% 100%, 0 100%)" }}
+      >
         <div className="max-w-[80rem] mx-auto w-full text-center">
           <h2 className="text-display-lg font-semibold tracking-tight text-ink mb-20">Books by Us</h2>
           
-          <div className="flex flex-col items-center justify-center gap-0 md:gap-4 w-full max-w-5xl mx-auto">
+          <div className="flex flex-col items-center justify-center gap-24 md:gap-16 w-full max-w-5xl mx-auto">
             {/* Book 1 */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-20 w-full">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-20 w-full -mt-6 md:mt-0">
               <div className="flex-1 flex justify-center md:justify-end w-full">
                 <div className="group cursor-pointer relative w-80 md:w-96 transition-transform duration-500 hover:-translate-y-4 hover:scale-105 hover:drop-shadow-2xl">
                   <img src="/IMG_20260419_031303_448-removebg-preview.png" alt="ፖርኖርሽኝ" className="w-full h-auto object-contain" />
                 </div>
               </div>
-              <div className="flex-1 text-center md:text-left w-full">
+              <div className="flex-1 text-center md:text-left w-full -mt-24 md:mt-0">
                 <h1 className="text-display-lg md:text-display-xl font-bold text-ink mb-4">ፖርኖርሽኝ</h1>
                 <h2 className="text-heading md:text-display-sm font-medium text-accent mb-6">በ ምናሴ ይርጉ ጎበና</h2>
                 <p className="text-lead text-ink-2 leading-relaxed mb-8">
@@ -130,17 +203,17 @@ export default function LandingPage() {
             </div>
 
             {/* Book 2 */}
-            <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-12 md:gap-20 w-full">
+            <div className="flex flex-col md:flex-row-reverse items-center justify-between gap-2 md:gap-20 w-full -mt-6 md:mt-0">
               <div className="flex-1 flex justify-center md:justify-start w-full">
                 <div className="group cursor-pointer relative w-64 md:w-80 transition-transform duration-500 hover:-translate-y-4 hover:scale-105 hover:drop-shadow-2xl">
-                  <img src="/IMG_20261009_005126_794-removebg-preview.png" alt="የህሩያን ሂወት" className="w-full h-auto object-contain" />
+                  <img src="/IMG_20261009_005126_794-removebg-preview.png" alt="የኅሩያን ሕይወት" className="w-full h-auto object-contain" />
                 </div>
               </div>
-              <div className="flex-1 text-center md:text-right w-full">
-                <h1 className="text-display-lg md:text-display-xl font-bold text-ink mb-4">የህሩያን ሂወት</h1>
+              <div className="flex-1 text-center md:text-right w-full -mt-24 md:mt-0">
+                <h1 className="text-display-lg md:text-display-xl font-bold text-ink mb-4">የኅሩያን ሕይወት</h1>
                 <h2 className="text-heading md:text-display-sm font-medium text-accent mb-6">በ ምናሴ ይርጉ ጎበና</h2>
                 <p className="text-lead text-ink-2 leading-relaxed mb-8">
-                  የወሲባዊ ቅድስና መጽሃፍቅዱሳዊ መርሆች እና አተገባበራችው
+                  የወሲባዊ ቅድስና መጽሐፍቅዱሳዊ መርሆች እና አተገባበራችው
                 </p>
                 <Button variant="primary" size="md" href="tel:+251986552076" className="font-semibold px-6">To order: +251986552076</Button>
               </div>
@@ -149,16 +222,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="w-full mt-auto py-10 px-6 border-t border-line text-center bg-canvas">
-        <div className="flex items-center justify-center gap-2 mb-2 transition-opacity duration-300 hover:opacity-80">
-          <Icon name="sparkles" size={16} className="text-accent" />
-          <span className="font-semibold text-ink">Purity Matters</span>
-        </div>
-        <p className="text-caption text-ink-3">
-          &copy; 2026 Purity Matters. All rights reserved.
-        </p>
-      </footer>
+
     </div>
   );
 }

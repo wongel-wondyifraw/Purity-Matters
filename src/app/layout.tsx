@@ -1,6 +1,23 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+
+const nokiaAmharic = localFont({
+  src: [
+    {
+      path: "../../public/NokiaPureHeadline_ULt.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../../public/NokiaPureHeadline_Bd.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-nokia-amharic",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${nokiaAmharic.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

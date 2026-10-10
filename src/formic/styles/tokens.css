@@ -11,7 +11,7 @@
 
 :root {
   /* Typography */
-  --font-sans: "Urbanist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Urbanist", var(--font-nokia-amharic), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Menlo, monospace;
 
   /* Type scale — one standard ramp, 14px base, integer steps:
